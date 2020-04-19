@@ -26,33 +26,6 @@ jobs:
       - run:
           name: Compress Artifacts
           command: tar -cvf build.tar public
-      - run:
-          name: List files
-          command: ls -laf
-      - store_artifacts:
-          path: ./build.tar
-      - persist_to_workspace:
-          root: ~/ashishsantikari.info
-          paths:
-            - public
-            - firebase.json
-            - .firebaserc
-  deploy:
-    docker:
-      - image: zeroplusx/firebase-tools
-    working_directory: ~/ashishsantikari.info
-    steps:
-      - attach_workspace:
-          at: ~/ashishsantikari.info
-      - run:
-          name: list workdir
-          command: ls -l
-      - run:
-          name: Compress Artifacts
-          command: tar -cvf build.tar public
-      - run:
-          name: List files
-          command: ls -laf
       - store_artifacts:
           path: ./build.tar
       - persist_to_workspace:
