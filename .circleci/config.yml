@@ -27,7 +27,7 @@ jobs:
           name: Compress Artifacts
           command: tar -cvf build-"$CIRCLE_SHA1".tar public
       - store_artifacts:
-          path: build.tar
+          path: build-"$CIRCLE_SHA1".tar
       - persist_to_workspace:
           root: ~/ashishsantikari.info
           paths:
