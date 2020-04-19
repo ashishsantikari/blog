@@ -24,5 +24,41 @@ jobs:
           name: Gatsby Build
           command: npm run build
       - run:
+          name: Compress Artifacts
+          command: tar -cvf build.tar public
+      - run:
+          name: List files
+          command: ls -laf
+      - store_artifacts:
+          path: ./build.tar
+      - persist_to_workspace:
+          root: ~/ashishsantikari.info
+          paths:
+            - public
+            - firebase.json
+            - .firebaserc
+  deploy:
+    docker:
+      - image: zeroplusx/firebase-tools
+    working_directory: ~/ashishsantikari.info
+    steps:
+      - attach_workspace:
+          at: ~/ashishsantikari.info
+      - run:
+          name: list workdir
+          command: ls -l
+      - run:
           name: Firebase Deploy
-          command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN"
+          command: firebase deploy --token "$FIREBASE_TOKEN"
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
+
