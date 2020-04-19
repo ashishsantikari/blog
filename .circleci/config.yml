@@ -23,6 +23,21 @@ jobs:
       - run:
           name: Gatsby Build
           command: npm run build
+      - persist_to_workspace:
+          root: /
+          paths:
+            - build
+            - firebase.json
+  deploy:
+    docker:
+      - image: zeroplusx/firebase-tools
+    working_directory: ~/ashishsantikari.info
+    steps:
+      - attach_workspace:
+          at: /
+      - run:
+          name: list workdir
+          command: ls
       - run:
           name: Compress Artifacts
           command: tar -cvf build.tar public
