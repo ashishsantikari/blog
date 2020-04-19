@@ -23,8 +23,11 @@ jobs:
       - run:
           name: Gatsby Build
           command: npm run build
+      - run:
+          name: Compress Artifacts
+          command: tar -cvf build-"$CIRCLE_SHA1".tar public
       - store_artifacts:
-          path: /public
+          path: build.tar
       - persist_to_workspace:
           root: ~/ashishsantikari.info
           paths:
