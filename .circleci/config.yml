@@ -37,7 +37,7 @@ jobs:
           at: ~/ashishsantikari.info
       - run:
           name: list workdir
-          command: ls
+          command: ls -l
       - run:
           name: Firebase Deploy
           command: firebase deploy --token "$FIREBASE_TOKEN"
