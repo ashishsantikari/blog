@@ -6,6 +6,8 @@ module.exports = {
     siteUrl: `https://ashishsantikari.info/`,
     social: {
       twitter: `ashishsantikari`,
+      github: 'ashishsantikari',
+      linkedin: 'ashishsantikari'
     },
   },
   plugins: [
@@ -63,7 +65,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/lightbulb.png`,
       },
     },
     `gatsby-plugin-offline`,

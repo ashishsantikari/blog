@@ -26,11 +26,13 @@ const Bio = () => {
           author
           social {
             twitter
+            github
+            linkedin
           }
         }
       }
     }
-  `)
+  `);
 
   const { author, social } = data.site.siteMetadata
   return (
@@ -54,11 +56,15 @@ const Bio = () => {
         }}
       />
       <p>
-        Written by <strong>{author}</strong> who believes in creating a better world with technology. Benguluru, India.
-        {` `}
-        <a href={`https://twitter.com/${social.twitter}`}>
-          You should follow him on Twitter
+        Written by <strong>{author}</strong> who believes in talent growth. Berlin, DE.
+        {` Find him on `}
+        <a target="_new" href={`https://github.com/${social.github}`}>
+          Github
         </a>
+        {` and `}
+          <a target="_new" href={`https://linkedin.com/in/${social.linkedin}`}>
+              LinkedIn.
+          </a>
       </p>
     </div>
   )
