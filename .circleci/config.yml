@@ -37,7 +37,7 @@ jobs:
           at: ~/ashishsantikari.info
       - run:
           name: list workdir
-          command: ls
+          command: ls -l
       - run:
           name: Compress Artifacts
           command: tar -cvf build.tar public
