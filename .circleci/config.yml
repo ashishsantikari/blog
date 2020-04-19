@@ -28,6 +28,7 @@ jobs:
           paths:
             - build
             - firebase.json
+            - .firebaserc
   deploy:
     docker:
       - image: zeroplusx/firebase-tools
