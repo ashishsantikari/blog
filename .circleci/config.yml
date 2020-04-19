@@ -24,7 +24,7 @@ jobs:
           name: Gatsby Build
           command: npm run build
       - persist_to_workspace:
-          root: /
+          root: ~/ashishsantikari.info
           paths:
             - build
             - firebase.json
@@ -34,7 +34,7 @@ jobs:
     working_directory: ~/ashishsantikari.info
     steps:
       - attach_workspace:
-          at: /
+          at: ~/ashishsantikari.info
       - run:
           name: list workdir
           command: ls
