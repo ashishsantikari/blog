@@ -6,8 +6,8 @@ module.exports = {
     siteUrl: `https://ashishsantikari.info/`,
     social: {
       twitter: `ashishsantikari`,
-      github: 'ashishsantikari',
-      linkedin: 'ashishsantikari'
+      github: "ashishsantikari",
+      linkedin: "ashishsantikari",
     },
   },
   plugins: [
@@ -52,7 +52,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: process.env.FIREBASE_MEASUREMENT_ID,
+        trackingId: process.env.GA_ANALYTICS_ID,
       },
     },
     `gatsby-plugin-feed`,
@@ -87,8 +87,8 @@ module.exports = {
           storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
           messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
           appId: process.env.FIREBASE_APP_ID,
-        }
-      }
-    }
+        },
+      },
+    },
   ],
-};
+}
