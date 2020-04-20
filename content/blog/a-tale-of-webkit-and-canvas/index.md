@@ -4,7 +4,7 @@ date: "2020-04-20T19:18:51.801Z"
 description: REM unit on canvas, wekbit incompatibility issue
 ---
 
-Last month, I was working with ChartJS to render a very simple pie chart.
+Two months back, I was working with ChartJS to render a very simple pie chart.
 Everything was smooth until one of our UX design expert who has eagle eyes found out that the label inside the pie chart was not of the same size in Safari as compared to other browsers.
 
 Well, I took a sigh of relief, it wasn't IE.
