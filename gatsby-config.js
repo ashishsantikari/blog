@@ -60,6 +60,7 @@ module.exports = {
         },
         optimize: {
           id: process.env.OPTIMIZE_ID,
+          activateOn: "optimize.activate",
         },
         analytics: {
           id: process.env.GA_ANALYTICS_ID,
