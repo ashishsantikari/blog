@@ -5671,12 +5671,12 @@ gatsby-plugin-firebase@^0.2.0-beta.4:
   resolved "https://registry.yarnpkg.com/gatsby-plugin-firebase/-/gatsby-plugin-firebase-0.2.0-beta.4.tgz#a4d8bfdce8c65efa284d0c523f8524c28f4a786c"
   integrity sha512-F1uh9T5dY38aeNvKzqj+3K655dce1QS70wuG4bhV9L3cnTJR2vitTWyIoCvRJJfPs7Xq7LgjUDmHDrEos4S3gQ==
 
-gatsby-plugin-google-analytics@^2.1.14:
-  version "2.1.14"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-2.1.14.tgz#b7ad9020f1e47e8139d195997b6db044f882bf18"
-  integrity sha512-GCBnYjNMfu8Dd5USTS3qpE7I0Qxa9Hv3JzMan04U1Kk1ve8MNZ+vBW8qAQoVNOolyTCBqLbmaiGwC+aqqoVr+A==
+gatsby-plugin-google-marketing-platform@^0.1.20:
+  version "0.1.20"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-marketing-platform/-/gatsby-plugin-google-marketing-platform-0.1.20.tgz#86c8ea07fec52c51ff6c8363997d73887a8ea09c"
+  integrity sha512-B9jRWTrRU3o1S3qqBwnwForpywNeSCyn9skMY58O35aBoVmSiue6ZTpo399JwSR8AJjYzyCyZI6q8CD48480BQ==
   dependencies:
-    "@babel/runtime" "^7.5.5"
+    common-tags "^1.8.0"
 
 gatsby-plugin-manifest@^2.2.14:
   version "2.2.14"
