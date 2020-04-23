@@ -6,8 +6,8 @@ module.exports = {
     siteUrl: `https://ashishsantikari.info`,
     social: {
       twitter: `ashishsantikari`,
-      github: 'ashishsantikari',
-      linkedin: 'ashishsantikari'
+      github: "ashishsantikari",
+      linkedin: "ashishsantikari",
     },
   },
   plugins: [
@@ -50,9 +50,14 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: "gatsby-plugin-google-marketing-platform",
       options: {
-        trackingId: process.env.GA_ANALYTICS_ID,
+        optimize: {
+          id: process.env.OPTIMIZE_ID,
+        },
+        analytics: {
+          id: process.env.GA_ANALYTICS_ID,
+        },
       },
     },
     `gatsby-plugin-feed`,
@@ -90,6 +95,6 @@ module.exports = {
         },
       },
     },
-    "gatsby-plugin-remove-trailing-slashes"
+    "gatsby-plugin-remove-trailing-slashes",
   ],
 }
