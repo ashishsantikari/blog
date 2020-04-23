@@ -59,11 +59,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Pretty Ideas | Ashish Santikari`,
+        short_name: `Pretty Ideas`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#ff5700`,
         display: `minimal-ui`,
         icon: `content/assets/lightbulb.png`,
       },
