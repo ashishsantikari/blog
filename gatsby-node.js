@@ -46,6 +46,7 @@ exports.createPages = async ({ graphql, actions }) => {
         previous,
         next,
       },
+      trailingSlash: false,
     })
   })
 }

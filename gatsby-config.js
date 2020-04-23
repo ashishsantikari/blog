@@ -3,11 +3,11 @@ module.exports = {
     title: `Pretty Ideas`,
     author: `Ashish Santikari`,
     description: `A space for blogs. I write what I feel is necessary.`,
-    siteUrl: `https://ashishsantikari.info/`,
+    siteUrl: `https://ashishsantikari.info`,
     social: {
       twitter: `ashishsantikari`,
-      github: "ashishsantikari",
-      linkedin: "ashishsantikari",
+      github: 'ashishsantikari',
+      linkedin: 'ashishsantikari'
     },
   },
   plugins: [
@@ -90,5 +90,6 @@ module.exports = {
         },
       },
     },
+    "gatsby-plugin-remove-trailing-slashes"
   ],
 }
