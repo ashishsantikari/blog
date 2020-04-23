@@ -55,6 +55,9 @@ module.exports = {
         dataLayer: {
           gaPropertyId: process.env.GA_ANALYTICS_ID,
         },
+        tagmanager: {
+          id: process.env.GTM_ID,
+        },
         optimize: {
           id: process.env.OPTIMIZE_ID,
         },
