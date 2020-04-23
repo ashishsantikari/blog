@@ -52,6 +52,9 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-marketing-platform",
       options: {
+        dataLayer: {
+          gaPropertyId: process.env.GA_ANALYTICS_ID,
+        },
         optimize: {
           id: process.env.OPTIMIZE_ID,
         },
