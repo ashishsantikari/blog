@@ -5,7 +5,6 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
-import { trimTrailingSlash } from "../utils/trimTralingSlash"
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -62,14 +61,14 @@ class BlogPostTemplate extends React.Component {
           >
             <li>
               {previous && (
-                <Link to={trimTrailingSlash(previous.fields.slug)} rel="prev">
+                <Link to={previous.fields.slug} rel="prev">
                   ← {previous.frontmatter.title}
                 </Link>
               )}
             </li>
             <li>
               {next && (
-                <Link to={trimTrailingSlash(next.fields.slug)} rel="next">
+                <Link to={next.fields.slug} rel="next">
                   {next.frontmatter.title} →
                 </Link>
               )}
