@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "ashishsantikari",
   "private": true,
   "description": "A starter for a blog powered by Gatsby and Markdown",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Ashish Santikari <mailto.ashishsan@gmail.com>",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
@@ -37,7 +37,6 @@
   },
   "devDependencies": {
     "firebase-tools": "^7.3.1",
-    "gatsby-plugin-remove-trailing-slashes": "^2.2.3",
     "prettier": "^2.0.5"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
@@ -48,7 +47,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/ashishsantikari/ashishsantikari.info.git"
   },
   "scripts": {
     "build": "gatsby build",
