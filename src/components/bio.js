@@ -34,7 +34,7 @@ const Bio = () => {
     }
   `);
 
-  const { author, social } = data.site.siteMetadata
+  const { author, social } = data.site.siteMetadata;
   return (
     <div
       style={{
@@ -56,7 +56,7 @@ const Bio = () => {
         }}
       />
       <p>
-        Written by <strong>{author}</strong> who believes in talent growth. Berlin, DE.
+        by <strong>{author}</strong>. Berlin, DE.
         {` Find him on `}
         <a target="_new" href={`https://github.com/${social.github}`}>
           Github
@@ -68,6 +68,6 @@ const Bio = () => {
       </p>
     </div>
   )
-}
+};
 
 export default Bio
