@@ -4,14 +4,10 @@
   "description": "A starter for a blog powered by Gatsby and Markdown",
   "version": "0.1.0",
   "author": "Ashish Santikari <mailto.ashishsan@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
   "dependencies": {
     "gatsby": "^2.20.36",
     "gatsby-image": "^2.3.5",
     "gatsby-plugin-feed": "^2.3.11",
-    "gatsby-plugin-firebase": "^0.2.0-beta.4",
     "gatsby-plugin-google-marketing-platform": "^0.1.20",
     "gatsby-plugin-manifest": "^2.3.7",
     "gatsby-plugin-offline": "^3.1.5",
@@ -36,10 +32,9 @@
     "typography-theme-twin-peaks": "^0.16.19"
   },
   "devDependencies": {
-    "firebase-tools": "^8.1.1",
     "prettier": "^2.0.5"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://ashishsantikari.info",
   "keywords": [
     "gatsby"
   ],
@@ -47,7 +42,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ashishsantikari/ashishsantikari.info.git"
+    "url": "https://github.com/ashishsantikari/ashishsantikari.info.git"
   },
   "scripts": {
     "build": "gatsby build",
