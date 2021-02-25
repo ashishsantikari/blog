@@ -4,6 +4,8 @@ date: "2021-02-24T22:10:09.168Z"
 description: The tools I use which make me productive
 ---
 
+![swiss-knife]
+
 Every person has there own set of tools that he/she likes while working.
 I too have some favourites tools that impacts me a lot to my productivity.
 I am jotting down those below. These are my personal preference and not endorsements.
@@ -35,3 +37,4 @@ Although the list is too big, these are some of the things without which it is d
 [alfred]: https://www.alfredapp.com
 [firefox]: https://www.mozilla.org/en-US/firefox/new/
 [edge]: https://www.microsoft.com/en-us/edge
+[swiss-knife]: ./swiss-knife.jpg
