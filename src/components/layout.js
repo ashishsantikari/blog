@@ -63,7 +63,8 @@ class Layout extends React.Component {
         <header>{header}</header>
         <main>{children}</main>
         <footer>
-            © {new Date().getFullYear()}, Built with <span style={{color: '#F00'}}>♥</span>
+          © {new Date().getFullYear()}, Built with{" "}
+          <span style={{ color: "#F00" }}>♥</span>
           {` `}
         </footer>
       </div>

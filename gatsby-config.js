@@ -11,6 +11,10 @@ module.exports = {
     },
   },
   plugins: [
+    "gatsby-plugin-dark-mode",
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -87,6 +91,6 @@ module.exports = {
       options: {
         pathToConfigModule: `src/utils/typography`,
       },
-    }
+    },
   ],
-};
+}

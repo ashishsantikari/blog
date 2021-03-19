@@ -14,14 +14,14 @@ I am jotting down those below. These are my personal preference and not endorsem
 2. [Apple Magic Keyboard][apple-magic-keyboard] (I will be soon moving to mechanical keyboard, and will provide a review of the same)
 3. [Sony WH-1000XM3 headphones][sony-wh1000xm3] Best noise cancellation headphones I have used so far
 4. [Logitech M720 Triathlon mouse][logitech-m720]
-4. [IntelliJ Idea Ultimate][intellij-idea]
-4. [iTerm][iterm]
-5. [Clipy][clipy]
-6. [Rectangle][rectangle-app]
-7. [Mozilla Firefox][firefox] / [Microsoft Edge][edge] (sorry Chrome)
-8. [Pocket][pocket]
-9. [1Password][1password]
-10. [Alfred][alfred]
+5. [IntelliJ Idea Ultimate][intellij-idea]
+6. [iTerm][iterm]
+7. [Clipy][clipy]
+8. [Rectangle][rectangle-app]
+9. [Mozilla Firefox][firefox] / [Microsoft Edge][edge] (sorry Chrome)
+10. [Pocket][pocket]
+11. [1Password][1password]
+12. [Alfred][alfred]
 
 Although the list is too big, these are some of the things without which it is difficult for me to work on a daily basis.
 
