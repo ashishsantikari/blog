@@ -4,19 +4,17 @@ date: "2021-03-14T20:24:55.859Z"
 description: Honest Review of Sony WH-1000XM3 headphones.
 ---
 
-Hello Readers,
-
-Welcome to my blog. I hope you are okay in this Corona Pandemic, I am certainly doing good too.
-
+Dear Readers, welcome to my blog. I hope you are okay in this Corona Pandemic, I am certainly doing good too.
 You seldom open my blog site because I rarely write. Believe me, I am trying my best
 to change that.
 
-![itry]
+# Attention !!!
 
 Oh! BTW, **I will be experimenting with the colors** on my blog site for a nicer experience.
 I would be happy to hear from you. Click [this](mailto:hi@ashishsantikari.info?subject=Feedback on the website) and
 send me a quick email feedback, if you would like to.
 
+# Honest Review
 ![headphone]
 
 I would like to share my experience on _Sony WH-bla-bla-M3_. The name is so confusing.
@@ -31,6 +29,8 @@ I also love the touch pad on the right side which is so amazing and has that add
 factor.
 
 ![wow]
+
+# The Trick
 
 Now, the feature of toggling the various modes of the headphones is very much limited to mobile connectivity and not
 computers(PC/Mac/Linux). You don't have the software like the [Headphones][app] app that

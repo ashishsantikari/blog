@@ -1,2 +1,2 @@
 // custom typefaces
-import "typeface-inter"
+import "typeface-inter";
