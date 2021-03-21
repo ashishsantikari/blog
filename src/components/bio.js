@@ -10,6 +10,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 import { rhythm } from "../utils/typography";
+import ExternalLink from "./external-link";
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -37,7 +38,7 @@ const Bio = () => {
     }
   `);
 
-  const { author, social } = data.site.siteMetadata;
+  const { author } = data.site.siteMetadata;
   return (
     <div
       style={{
@@ -59,15 +60,13 @@ const Bio = () => {
         }}
       />
       <p>
-        by <strong>{author}</strong>. Berlin, DE.
-        {` Find him on `}
-        <a target="_new" href={`https://github.com/${social.github}`}>
-          Github
-        </a>
-        {` and `}
-        <a target="_new" href={`https://linkedin.com/in/${social.linkedin}`}>
-          LinkedIn.
-        </a>
+        by{" "}
+        <strong>
+          <ExternalLink target="_new" href={`https://ashishsantikari.info`}>
+            {author}
+          </ExternalLink>
+        </strong>
+        . <br />
       </p>
     </div>
   );

@@ -1,20 +1,30 @@
 import Typography from "typography";
-import TwinPeaks from "typography-theme-twin-peaks";
+import wikipedia from "typography-theme-wikipedia";
 
-TwinPeaks.overrideThemeStyles = () => {
-  return {
-    "a.gatsby-resp-image-link": {
-      boxShadow: `none`,
-    },
-  };
-};
+wikipedia.baseFontSize = "16px";
+wikipedia.headerColor = "var(--header-color)";
 
-delete TwinPeaks.googleFonts;
+wikipedia.overrideThemeStyles = () => ({
+  a: {
+    color: "var(--textLink)",
+  },
+  "a:visited": {
+    color: "var(--textLinkVisited)"
+  },
+  // gatsby-remark-autolink-headers - don't underline when hidden
+  "a.anchor": {
+    boxShadow: "none",
+  },
+  // gatsby-remark-autolink-headers - use theme colours for the link icon
+  'a.anchor svg[aria-hidden="true"]': {
+    stroke: "var(--textLink)",
+  },
+  hr: {
+    background: "var(--hr)",
+  },
+});
 
-TwinPeaks.headerFontFamily = ["Inter", "sans-serif"];
-TwinPeaks.bodyFontFamily = ["Inter", "serif"];
-
-const typography = new Typography(TwinPeaks);
+const typography = new Typography(wikipedia);
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== `production`) {

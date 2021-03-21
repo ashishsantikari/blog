@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "gatsby";
-
 import { rhythm, scale } from "../utils/typography";
+import Link from "./link";
+import ThemeToggle from "./theme-toggle";
 
 class Layout extends React.Component {
   render() {
@@ -13,7 +13,7 @@ class Layout extends React.Component {
       header = (
         <h1
           style={{
-            ...scale(1.5),
+            ...scale(1.3),
             marginBottom: rhythm(1.5),
             marginTop: 0,
           }}
@@ -60,11 +60,23 @@ class Layout extends React.Component {
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
+        <section
+          style={{
+            display: "flex",
+            justifyContent: "flex-end",
+          }}
+        >
+          <ThemeToggle />
+        </section>
         <header>{header}</header>
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with{" "}
-          <span style={{ color: "#F00" }}>♥</span>
+        <footer
+          style={{
+            marginTop: rhythm(2),
+          }}
+        >
+          © {new Date().getFullYear()}, Built using Gatsby with{" "}
+          <span style={{ color: `var(--footer-emoji)` }}>♥</span>
           {` `}
         </footer>
       </div>
