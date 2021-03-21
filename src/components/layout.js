@@ -1,7 +1,7 @@
 import React from "react";
-import { ThemeToggler } from "gatsby-plugin-dark-mode";
 import { rhythm, scale } from "../utils/typography";
 import Link from "./link";
+import ThemeToggle from "./theme-toggle";
 
 class Layout extends React.Component {
   render() {
@@ -52,28 +52,34 @@ class Layout extends React.Component {
       );
     }
     return (
-      <ThemeToggler>
-        {({ theme, toggleTheme }) => (
-          <div
-            style={{
-              marginLeft: `auto`,
-              marginRight: `auto`,
-              maxWidth: rhythm(24),
-              padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-            }}
-          >
-            <header>{header}</header>
-            <main>{children}</main>
-            <footer style={{
-              marginTop: rhythm(2)
-            }}>
-              © {new Date().getFullYear()}, Built using Gatsby with {" "}
-              <span style={{ color: "#800080" }}>♥</span>
-              {` `}
-            </footer>
-          </div>
-        )}
-      </ThemeToggler>
+      <div
+        style={{
+          marginLeft: `auto`,
+          marginRight: `auto`,
+          maxWidth: rhythm(24),
+          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+        }}
+      >
+        <section
+          style={{
+            display: "flex",
+            justifyContent: "flex-end",
+          }}
+        >
+          <ThemeToggle />
+        </section>
+        <header>{header}</header>
+        <main>{children}</main>
+        <footer
+          style={{
+            marginTop: rhythm(2),
+          }}
+        >
+          © {new Date().getFullYear()}, Built using Gatsby with{" "}
+          <span style={{ color: `var(--footer-emoji)` }}>♥</span>
+          {` `}
+        </footer>
+      </div>
     );
   }
 }

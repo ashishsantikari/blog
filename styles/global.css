@@ -1,6 +1,30 @@
-:root {
-    --header-color: hsla(0,0%,0%,1);
-    --link-color: rgb(6, 69, 173);
-    --fg-color: #000;
-    --bg-color: hsla(0,0%,0%,0.85);
+body {
+  --bg: white;
+  --textNormal: #222;
+  --textTitle: #222;
+  --textLink: rgb(6, 69, 173);
+  --textLinkVisited: rgb(11, 0, 128);
+  --hr: hsla(0, 0%, 0%, 0.2);
+  --header-color: #000;
+  --footer-emoji: #800080;
+
+  --toggle-thumb-bg: #FAFAFA;
+  --toggle-thumb-active: #ffffcc;
+
+  background-color: var(--bg);
+  color: var(--textNormal);
+}
+
+body.dark {
+  --header-color: #fff;
+  --bg: #222831;
+  --textNormal: #ddd;
+  --textTitle: #eeeeee;
+  --textLink: #00adb5;
+  --textLinkVisited: #00adb5;
+  --hr: hsla(0, 0%, 100%, 0.2);
+  --footer-emoji: red;
+
+  --toggle-thumb-bg: #FAFAFA;
+  --toggle-thumb-active: #ffffcc;
 }
