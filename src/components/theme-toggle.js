@@ -19,9 +19,9 @@ function ThemeToggle() {
         theme === null ? (
           <div />
         ) : (
-          <label>
+          <label htmlFor="theme-switch">
             <Toggle
-              name="dark mode"
+              name="theme-switch"
               value="dark"
               checked={isDarkMode(theme)}
               onChange={(e) => toggleTheme(selectedMode(e))}

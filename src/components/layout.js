@@ -2,6 +2,8 @@ import React from "react";
 import { rhythm, scale } from "../utils/typography";
 import Link from "./link";
 import ThemeToggle from "./theme-toggle";
+import Footer from "./footer";
+import Credits from "./credits";
 
 class Layout extends React.Component {
   render() {
@@ -70,15 +72,8 @@ class Layout extends React.Component {
         </section>
         <header>{header}</header>
         <main>{children}</main>
-        <footer
-          style={{
-            marginTop: rhythm(2),
-          }}
-        >
-          © {new Date().getFullYear()}, Built using Gatsby with{" "}
-          <span style={{ color: `var(--footer-emoji)` }}>♥</span>
-          {` `}
-        </footer>
+        <Credits />
+        <Footer />
       </div>
     );
   }

@@ -5,12 +5,18 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`);
-  const result = await graphql(
+  const legalDocs = path.resolve(`./src/templates/legal-docs.js`);
+  const blogPostResults = await graphql(
     `
       {
         allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
+          filter: {
+            fields: {
+              slug: { nin: ["/terms-of-use/", "/privacy-policy/"] }
+            }
+          }
         ) {
           edges {
             node {
@@ -27,12 +33,43 @@ exports.createPages = async ({ graphql, actions }) => {
     `
   );
 
-  if (result.errors) {
-    throw result.errors;
+  if (blogPostResults.errors) {
+    throw blogPostResults.errors;
+  }
+
+  const legalDocsResults = await graphql(
+    `
+      {
+        allMarkdownRemark(
+          sort: { fields: [frontmatter___date], order: DESC }
+          limit: 1000
+          filter: {
+            fields: {
+              slug: { in: ["/terms-of-use/", "/privacy-policy/"] }
+            }
+          }
+        ) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+              }
+            }
+          }
+        }
+      }
+    `
+  );
+
+  if (legalDocsResults.error) {
+    throw legalDocs.error;
   }
 
   // Create blog posts pages.
-  const posts = result.data.allMarkdownRemark.edges;
+  const posts = blogPostResults.data.allMarkdownRemark.edges;
 
   posts.forEach((post, index) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node;
@@ -45,6 +82,19 @@ exports.createPages = async ({ graphql, actions }) => {
         slug: post.node.fields.slug,
         previous,
         next,
+      },
+      trailingSlash: false,
+    });
+  });
+  // create legal docs page
+  const legalDocuments = legalDocsResults.data.allMarkdownRemark.edges;
+
+  legalDocuments.forEach((legalDoc) => {
+    createPage({
+      path: legalDoc.node.fields.slug,
+      component: legalDocs,
+      context: {
+        slug: legalDoc.node.fields.slug,
       },
       trailingSlash: false,
     });
