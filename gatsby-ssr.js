@@ -15,7 +15,7 @@ function MAScript({ id }) {
 
 const HeadComponents = [
   React.createElement(MAScript, {
-    id: process.env.MA_ID,
+    id: process.env.GATSBY_MA_ID,
     key: "microanalytics",
   }),
 ];
