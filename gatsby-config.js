@@ -68,24 +68,6 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: "gatsby-plugin-google-marketing-platform",
-      options: {
-        dataLayer: {
-          gaPropertyId: process.env.GA_ANALYTICS_ID,
-        },
-        tagmanager: {
-          id: process.env.GTM_ID,
-        },
-        optimize: {
-          id: process.env.OPTIMIZE_ID,
-          activateOn: "optimize.activate",
-        },
-        analytics: {
-          id: process.env.GA_ANALYTICS_ID,
-        },
-      },
-    },
     `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
