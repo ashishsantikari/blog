@@ -89,5 +89,20 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    {
+      resolve: `gatsby-plugin-newrelic`,
+      options: {
+        configs: {
+          instrumentationType: `proAndSPA`,
+          accountId: `3176369`,
+          trustKey: `3176369`,
+          agentID: `199627503`,
+          licenseKey: `NRJS-54517fd196531ab967d`,
+          applicationID: `199627503`,
+          beacon: `bam.eu01.nr-data.net`,
+          errorBeacon: `bam.eu01.nr-data.net`,
+        }
+      }
+    }
   ],
 };
