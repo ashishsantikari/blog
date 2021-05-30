@@ -6,7 +6,7 @@
   "author": "Ashish Santikari <mailto.ashishsan@gmail.com>",
   "dependencies": {
     "gatsby": "^3.4",
-    "gatsby-image": "^3.1.0",
+    "gatsby-image": "^3.6.0",
     "gatsby-plugin-dark-mode": "^1.1.2",
     "gatsby-plugin-feed": "^3.1.0",
     "gatsby-plugin-image": "^1.4.1",
