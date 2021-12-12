@@ -37,4 +37,4 @@ Although the list is too big, these are some of the things without which it is d
 [alfred]: https://www.alfredapp.com
 [firefox]: https://www.mozilla.org/en-US/firefox/new/
 [edge]: https://www.microsoft.com/en-us/edge
-[swiss-knife]: ./swiss-knife.jpg
+[swiss-knife]: swiss-knife.jpg
