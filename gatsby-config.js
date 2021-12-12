@@ -19,9 +19,9 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /assets/
-        }
-      }
+          include: /assets/,
+        },
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -86,24 +86,29 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
+              return allMarkdownRemark.edges.map((edge) => {
                 return Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.excerpt,
+                  description: edge.node.html,
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  // custom_elements: [{ "content:encoded": edge.node.html }],
-                })
-              })
+                  // https://markshust.com/2020/06/25/fixing-images-in-gatsby-rss-feeds/
+                  custom_elements: [
+                    {
+                      "content:encoded": edge.node.html.replace(
+                        /(?<=\"|\s)\/static\//g,
+                        `${site.siteMetadata.siteUrl}\/static\/`
+                      ),
+                    },
+                  ],
+                });
+              });
             },
             query: `
               {
-                allMarkdownRemark(
-                  sort: { order: DESC, fields: [frontmatter___date] },
-                ) {
+                allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, filter: {fields: {slug: {nin: ["/terms-of-use/", "/privacy-policy/"]}}}) {
                   edges {
                     node {
-                      excerpt
                       html
                       fields { slug }
                       frontmatter {
@@ -116,7 +121,7 @@ module.exports = {
               }
             `,
             output: "/rss.xml",
-            title: "Pretty Ideas's RSS Feed",
+            title: "Pretty Ideas",
             // optional configuration to insert feed reference in pages:
             // if `string` is used, it will be used to create RegExp and then test if pathname of
             // current page satisfied this regular expression;
@@ -158,8 +163,8 @@ module.exports = {
           applicationID: `199627503`,
           beacon: `bam.eu01.nr-data.net`,
           errorBeacon: `bam.eu01.nr-data.net`,
-        }
-      }
-    }
+        },
+      },
+    },
   ],
 };
