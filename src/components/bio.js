@@ -15,7 +15,7 @@ import ExternalLink from "./external-link";
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
-      avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+      avatar: file(absolutePath: { regex: "/picture.jpg/" }) {
         childImageSharp {
           gatsbyImageData(
             width: 50

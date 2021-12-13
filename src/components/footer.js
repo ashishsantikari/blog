@@ -9,10 +9,23 @@ function Footer() {
         marginTop: rhythm(2),
       }}
     >
-      <div>
-        <Link to="/privacy-policy">Privacy Policy</Link>
-        {` | `}
-        <Link to="/terms-of-use">Terms and Conditions</Link>
+      <div
+        style={{
+          display: "flex",
+        }}
+      >
+        <div
+          style={{
+            width: "50%",
+          }}
+        >
+          <Link to="/privacy-policy">Privacy Policy</Link>
+          {` | `}
+          <Link to="/terms-of-use">Terms and Conditions</Link>
+        </div>
+        <div style={{ width: "50%", textAlign: 'end' }}>
+          <Link to="/rss.xml">RSS</Link>
+        </div>
       </div>
     </footer>
   );
